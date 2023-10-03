@@ -18,7 +18,7 @@ public class multiple : MonoBehaviour
         numero1 = Random.Range(2, 11);
         numero2 = Random.Range(2, 11);
         producto = numero1 * numero2;
-        aleatorio_respuesta = Random.Range(0, 2);
+        aleatorio_respuesta = Random.Range(0, 3);
         preguntaFinal = numero1.ToString() + " x " + numero2.ToString();
         pregunta.text = preguntaFinal;
         for (int i = 0; i <= respuestas.Length - 1; i++)
@@ -26,9 +26,11 @@ public class multiple : MonoBehaviour
             if (i == aleatorio_respuesta)
             {
                 respuestas[i].text = producto.ToString();
+                Debug.Log(respuestas[i].text = producto.ToString());
             }
             else if(i!= aleatorio_respuesta){
                 respuestas[i].text = Random.Range(2, 101).ToString();
+                Debug.Log(respuestas[i].text = Random.Range(2, 101).ToString());
             }
 
       
