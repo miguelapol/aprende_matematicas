@@ -14,7 +14,11 @@ public class multiple : MonoBehaviour
     void Start()
     {
 
-        //esto es una prueba de git
+        generadorNumero();
+
+    }
+ void generadorNumero()
+    {
         numero1 = Random.Range(2, 11);
         numero2 = Random.Range(2, 11);
         producto = numero1 * numero2;
@@ -28,19 +32,13 @@ public class multiple : MonoBehaviour
                 respuestas[i].text = producto.ToString();
                 Debug.Log(respuestas[i].text = producto.ToString());
             }
-            else if(i!= aleatorio_respuesta){
+            else if (i != aleatorio_respuesta)
+            {
                 respuestas[i].text = Random.Range(2, 101).ToString();
                 Debug.Log(respuestas[i].text = Random.Range(2, 101).ToString());
             }
-
-      
-
-            
         }
-
     }
-
-    // Update is called once per frame
     void Update()
     {
 
