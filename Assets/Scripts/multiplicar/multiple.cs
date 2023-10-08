@@ -16,6 +16,7 @@ public class multiple : MonoBehaviour
     int a;
     int aleatorio_respuesta;
     public int tiempoCronometro;
+    public int maximopuntuaje;
     private float contador;
     void Start()
     {
@@ -40,12 +41,10 @@ public class multiple : MonoBehaviour
             if (i == aleatorio_respuesta)
             {
                 respuestas[i].text = producto.ToString();
-                Debug.Log(respuestas[i].text = producto.ToString());
             }
             else if (i != aleatorio_respuesta)
             {
                 respuestas[i].text = Random.Range(2, 101).ToString();
-                Debug.Log(respuestas[i].text = Random.Range(2, 101).ToString());
             }
         }
     }
@@ -96,6 +95,10 @@ public class multiple : MonoBehaviour
         //el cronometro se ejecuta todo el juego
         //deltatime mide el tiempo que pasa entre cada frame 
         contador = contador - Time.deltaTime;
+        if(puntuaje.text == maximopuntuaje.ToString())
+        {
+            Debug.Log("ganaste");
+        }   
         cronometrotexto.text = contador.ToString("f0");
         if (contador <= 0)
         {
