@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class multiple : MonoBehaviour
 {
+    public Button [] botonesrespuestas;
     public Text pregunta;
     public Text[] respuestas;
     public Text cronometrotexto;
@@ -97,6 +98,10 @@ public class multiple : MonoBehaviour
         contador = contador - Time.deltaTime;
         if(puntuaje.text == maximopuntuaje.ToString())
         {
+            foreach (Button boton in botonesrespuestas)
+            {
+                boton.interactable = false;
+            }
             Debug.Log("ganaste");
         }   
         cronometrotexto.text = contador.ToString("f0");
