@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 275692020}
   - component: {fileID: 275692019}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: puntuaje_coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 549307362}
   - component: {fileID: 549307361}
   m_Layer: 5
-  m_Name: coin
+  m_Name: puntuaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -964,7 +964,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 599945143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2081055470}
+        m_TargetAssemblyTypeName: multiple, Assembly-CSharp
+        m_MethodName: respuestabloque3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &599945143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,7 +1097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 611901388}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2081055470}
+        m_TargetAssemblyTypeName: multiple, Assembly-CSharp
+        m_MethodName: respuestabloque2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &611901388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 805102433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2081055470}
+        m_TargetAssemblyTypeName: multiple, Assembly-CSharp
+        m_MethodName: respuestabloque4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &805102433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2294,7 +2330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1823548323}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2081055470}
+        m_TargetAssemblyTypeName: multiple, Assembly-CSharp
+        m_MethodName: respuestabloque1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1823548323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2572,12 +2620,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7dec8b50cce6b24c9f735b872e2de67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botonesrespuestas:
+  - {fileID: 1823548322}
+  - {fileID: 611901387}
+  - {fileID: 599945142}
+  - {fileID: 805102432}
   pregunta: {fileID: 322396927}
   respuestas:
   - {fileID: 663320034}
   - {fileID: 208694318}
   - {fileID: 998316438}
   - {fileID: 1416617493}
+  cronometrotexto: {fileID: 394663766}
+  puntuaje: {fileID: 275692020}
+  tiempoCronometro: 5
+  maximopuntuaje: 3
 --- !u!4 &2081055471
 Transform:
   m_ObjectHideFlags: 0
@@ -2600,5 +2657,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1625943793}
   - {fileID: 178438090}
-  - {fileID: 2081055471}
   - {fileID: 310534002}
+  - {fileID: 2081055471}

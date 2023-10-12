@@ -45,7 +45,7 @@ public class multiple : MonoBehaviour
             }
             else if (i != aleatorio_respuesta)
             {
-                respuestas[i].text = Random.Range(2, 101).ToString();
+                respuestas[i].text = Random.Range(4, 101).ToString();
             }
         }
     }
