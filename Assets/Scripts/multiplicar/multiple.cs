@@ -6,11 +6,11 @@ public class multiple : MonoBehaviour
 {
     public Button[] botonesrespuestas;
     public GameObject pantallafinal;
+    public GameObject pantallafinal2;
     public Text pregunta;
     public Text[] respuestas;
     public Text cronometrotexto;
     public Text puntuaje;
-
     int numero1;
     int numero2;
     string preguntaFinal;
@@ -21,6 +21,7 @@ public class multiple : MonoBehaviour
     public int maximopuntuaje;
     private float contador;
     bool b;
+    private bool juegoterminado = false;
     //con el uso de b se va repetir solo una vez  
     void Start()
     {
@@ -28,6 +29,7 @@ public class multiple : MonoBehaviour
         int a = 0;
 
         pantallafinal.SetActive(false);
+        pantallafinal2.SetActive(false);
         puntuaje.text = a.ToString();
         contador = tiempoCronometro;
         cronometrotexto.text = contador.ToString();
@@ -70,7 +72,7 @@ public class multiple : MonoBehaviour
     }
     public void respuestabloque4()
     {
-       click(3);
+        click(3);
     }
     void click(int numerorespuesta)
     {
@@ -84,35 +86,47 @@ public class multiple : MonoBehaviour
     }
     void Update()
     {
-        //el cronometro se ejecuta todo el juego
-        //deltatime mide el tiempo que pasa entre cada frame 
-        Button botonmenu = GameObject.Find("BotonPausa").GetComponent<Button>();
-        //contador = contador - Time.deltaTime;
-        if (puntuaje.text == maximopuntuaje.ToString() && b == true)
+        if (!juegoterminado)
         {
-            //desactivar boton de menu del juego
-            botonmenu.interactable = false;
-            pantallafinal.SetActive(true);
-            //congelar tiempo del cronometro
-            contador = 0;
-            foreach (Button boton in botonesrespuestas)
+            //el cronometro se ejecuta todo el juego
+            //deltatime mide el tiempo que pasa entre cada frame 
+            Button botonmenu = GameObject.Find("BotonPausa").GetComponent<Button>();
+            contador = contador - Time.deltaTime;
+            if (puntuaje.text == maximopuntuaje.ToString() && b == true)
             {
-                boton.interactable = false;
+                //desactivar boton de menu del juego
+                botonmenu.interactable = false;
+                pantallafinal.SetActive(true);
+                //congelar tiempo del cronometro
+                contador = 0;
+                foreach (Button boton in botonesrespuestas)
+                {
+                    boton.interactable = false;
+                }
+                b = false;
+                juegoterminado = true;
             }
-            b = false;
         }
 
-        cronometrotexto.text = contador.ToString("f0");
-        if (contador <= 0)
+        if (!juegoterminado)
         {
-            Debug.Log("se acabo el tiempo");
-            iniciador();
-            //se hace para que el contado se hace 5 segundos
-            contador = tiempoCronometro;
-            cronometrotexto.text = contador.ToString();
+            cronometrotexto.text = contador.ToString("f0");
+            if (contador <= 0)
+            {
 
+                Debug.Log("se acabo el tiempo");
+                pantallafinal2.SetActive(true);
+                iniciador();
+                //se hace para que el contado se hace 5 segundos
+                contador = tiempoCronometro;
+                cronometrotexto.text = contador.ToString();
+                juegoterminado = true;
+            }
+           
 
         }
+
+
 
     }
 
