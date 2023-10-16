@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class niveles : MonoBehaviour
 {
-    public void Jugar(string SampleScene)
+    public void Nivelprimero(string SampleScene)
     {
         SceneManager.LoadScene(SampleScene);
+    }
+    public void Nivelsegundo(string SecondScene)
+    {
+        SceneManager.LoadScene(SecondScene);
     }
 
 
