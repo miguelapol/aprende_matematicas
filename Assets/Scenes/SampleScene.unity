@@ -3616,7 +3616,7 @@ MonoBehaviour:
   cronometrotexto: {fileID: 394663766}
   puntuaje: {fileID: 275692020}
   tiempoCronometro: 5
-  maximopuntuaje: 3
+  maximopuntuaje: 10
 --- !u!4 &2081055471
 Transform:
   m_ObjectHideFlags: 0

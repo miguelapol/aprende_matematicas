@@ -573,7 +573,7 @@ MonoBehaviour:
   cronometrotexto: {fileID: 487791941}
   puntuaje: {fileID: 1049937919}
   tiempoCronometro: 5
-  maximopuntuaje: 3
+  maximopuntuaje: 10
 --- !u!1 &487791938
 GameObject:
   m_ObjectHideFlags: 0
