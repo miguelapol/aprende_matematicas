@@ -80,6 +80,14 @@ public class multiple : MonoBehaviour
         {
             a++;
             puntuaje.text = a.ToString();
+        }else
+        { 
+            juegoterminado = true;
+            pantallafinal2.SetActive(true);
+            foreach (Button boton in botonesrespuestas)
+            {
+                boton.interactable = false;
+            }
         }
         contador = tiempoCronometro;
         iniciador();
